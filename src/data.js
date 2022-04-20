@@ -33,3 +33,54 @@ export const cards = [
     },
 
 ]
+export const talents = [
+    { 
+        id: 1,
+        img: "./assets/women.png",
+        tags: ["internet","code","PHP"],
+        name: "Lê Văn Hải",
+        jobs: "Game Developer,UX,UI",
+    },
+    { 
+        id: 2,
+        img: "./assets/women.png",
+        tags: ["internet","code","PHP"],
+        name: "Lê Văn Hải",
+        jobs: "Game Developer,UX,UI",
+    },
+    { 
+        id: 3,
+        img: "./assets/women.png",
+        tags: ["internet","code","PHP"],
+        name: "Lê Văn Hải",
+        jobs: "Preferred:Technology",
+    },
+    { 
+        id: 4,
+        img: "./assets/women.png",
+        tags: ["internet","code","PHP"],
+        name: "Lê Văn Hải",
+        jobs: "Game Developer,UX,UI",
+    },
+    { 
+        id: 5,
+        img: "./assets/women.png",
+        tags: ["internet","code","PHP"],
+        name: "Lê Văn Hải",
+        jobs: "Game Developer,UX,UI",
+    },
+    { 
+        id: 6,
+        img: "./assets/women.png",
+        tags: ["internet","code","PHP"],
+        name: "Lê Văn Hải",
+        jobs: "Game Developer,UX,UI",
+    },
+    { 
+        id: 7,
+        img: "./assets/women.png",
+        tags: ["internet","code","PHP"],
+        name: "Lê Văn Hải",
+        jobs: "Game Developer,UX,UI",
+    },
+]
