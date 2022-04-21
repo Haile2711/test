@@ -4,16 +4,17 @@
     display: flex;
     align-items: center;
     
+    position: relative;
     .left {
-        position: relative;
         background-color:#ffffff;
         flex: 1;
+
        
         .text {
             position: absolute;
             bottom:30%;
             letter-spacing: 0.355em;
-            margin-left: 16px;
+            left: -120px;
             width: 299px;
             height: 14px;
             line-height: 14px;

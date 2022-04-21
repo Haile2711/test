@@ -69,18 +69,4 @@ export const talents = [
         name: "Lê Văn Hải",
         jobs: "Game Developer,UX,UI",
     },
-    { 
-        id: 6,
-        img: "./assets/women.png",
-        tags: ["internet","code","PHP"],
-        name: "Lê Văn Hải",
-        jobs: "Game Developer,UX,UI",
-    },
-    { 
-        id: 7,
-        img: "./assets/women.png",
-        tags: ["internet","code","PHP"],
-        name: "Lê Văn Hải",
-        jobs: "Game Developer,UX,UI",
-    },
 ]

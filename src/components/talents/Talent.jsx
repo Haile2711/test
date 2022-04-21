@@ -1,10 +1,14 @@
 import "./talent.scss";
-import { Rerousel } from 'rerousel';
-import { useRef } from "react";
-import {talents} from "../../data"
+import {talents} from "../../data";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/scss';
+import 'swiper/scss/navigation'
+import 'swiper/scss/pagination'
+import { Pagination, Navigation,Autoplay } from "swiper";
+
 
 export default function Talent() {
-    const talent = useRef(null)
+
   return (
     <div className="talent">
         <div className="top">
@@ -19,32 +23,46 @@ export default function Talent() {
                 Vietnam’s first innovation platform empowered by credit utility and more than 10K experts network at    
             </div>
         </div>
+        
+
         <div className="bottom">
-            <Rerousel itemRef ={talent} className="wrapper" interval="5000">
-                <div className="wrapper" ref={talent}>
-                    {talents.map((talent) => (
-                    <div className="container" key={talent.id}>
-                        <img className="avatar" src={talent.img} alt="" />
-                        
-                        <div className="tag" >
-                            <div className="tagItem">INTERNET</div>
-                            <div className="tagItem">CODE</div>
-                            <div className="tagItem">PHP</div>
-                        </div>
-                        <div className="talentName">
-                            {talent.name}
-                        </div>
-                        <div className="jobs">
-                            {talent.jobs}
-                        </div>
-                        <div className="items">
-                            <img className="iconMess" src="./assets/mess.png" alt=""/>
-                            <button className="btnFollow">Follow</button>
-                        </div>
+            <Swiper 
+             slidesPerView={3}
+             slidesPerGroup={3}
+             loop={true}
+             loopFillGroupWithBlank={true}
+             pagination={{
+               clickable: true,
+             }}
+             autoplay={{
+                delay: 2500,
+              }}
+             navigation={true}
+             modules={[Pagination, Navigation,Autoplay]}
+             className="mySwiper">
+            {talents.map((talent) => (
+                <SwiperSlide >
+                <div className="container" >
+                    <img className="avatar" src={talent.img} alt="" />
+                    <div className="tag" >
+                        <div className="tagItem">INTERNET</div>
+                        <div className="tagItem">CODE</div>
+                        <div className="tagItem">PHP</div>
                     </div>
-                    ))}
-            </div>
-            </Rerousel>
+                    <div className="talentName">
+                        {talent.name}
+                    </div>
+                    <div className="jobs">
+                        {talent.jobs}
+                    </div>
+                    <div className="items">
+                        <img className="iconMess" src="./assets/mess.png" alt=""/>
+                        <button className="btnFollow">Follow</button>
+                    </div>
+                </div>
+                </SwiperSlide>
+            ))}        
+        </Swiper>
         </div>
     </div>
   )

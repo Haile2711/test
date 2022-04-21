@@ -5,17 +5,23 @@ import Card from "../components/card/Card";
 import PostCard from "../components/postCard/PostCard";
 import Talent from "../components/talents/Talent";
 import Project from "../components/project/Project";
+import Guide from "../components/guide/Guide";
+import Documents from "../components/documents/Documents";
+import Contact from "../components/contact/Contact";
 export default function Home() {
   return (
-    <div className="home">
+    <>
         <Topbar />
-        <div className="section">
+    <div className="home">
             <Intro />
             <Card />
             <PostCard />
             <Talent />
             <Project />
-        </div>
+            <Guide />
+            <Documents />
+            <Contact />
     </div>
+    </>
   )
 }
